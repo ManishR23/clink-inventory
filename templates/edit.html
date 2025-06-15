@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Inventory Item</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, textarea { display: block; width: 100%; margin: 8px 0; padding: 8px; }
+    button { background: #3498db; color: white; padding: 10px 14px; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Edit Inventory Item</h1>
+  <form method="POST">
+    Name: <input type="text" name="name" value="{{ item[1] }}">
+    Category: <input type="text" name="category" value="{{ item[2] }}">
+    Color: <input type="text" name="color" value="{{ item[3] }}">
+    Color Hex Code: <input type="text" name="color_id" value="{{ item[4] }}">
+    Clink Price ($): <input type="number" step="0.01" name="price_clink" value="{{ item[5] }}">
+    Home Depot Price ($): <input type="number" step="0.01" name="price_home_depot" value="{{ item[6] }}">
+    Available Quantity: <input type="number" name="available" value="{{ item[7] }}">
+    Length (in): <input type="number" step="0.01" name="length_in" value="{{ item[8] }}">
+    Width (in): <input type="number" step="0.01" name="width_in" value="{{ item[9] }}">
+    Height (in): <input type="number" step="0.01" name="height_in" value="{{ item[10] }}">
+    Number of Holes: <input type="number" name="num_holes" value="{{ item[11] }}">
+    <button type="submit">Save Changes</button>
+  </form>
+</body>
+</html>
