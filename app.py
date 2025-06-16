@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect
 import sqlite3
 
@@ -115,8 +116,10 @@ def edit(item_id):
     return render_template('edit.html', item=item)
 
 
+
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render’s port, default to 5000 for local dev
+    app.run(host='0.0.0.0', port=port)
 
     
